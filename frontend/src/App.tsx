@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import VotingView from './components/VotingView';
+import VotingAView from './components/VotingAView';
 import VotingBView from './components/VotingBView';
 import VotingCView from './components/VotingCView';
-import VoteResults from './components/VoteResults';
+import VoteAResults from './components/VoteAResults';
 import VoteBResults from './components/VoteBResults';
 import VoteCResults from './components/VoteCResults';
 import QRCodeView from './components/QRCodeView';
@@ -15,11 +15,11 @@ const App: React.FC = () => {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<VotingView />} />
-          <Route path="/vote1" element={<VotingView />} />
+          <Route path="/" element={<VotingAView />} />
+          <Route path="/vote1" element={<VotingAView />} />
           <Route path="/vote2" element={<VotingBView />} />
           <Route path="/vote3" element={<VotingCView />} />
-          <Route path="/results" element={<VoteResults />} />
+          <Route path="/results" element={<VoteAResults />} />
           <Route path="/results2" element={<VoteBResults />} />
           <Route path="/results3" element={<VoteCResults />} />
           <Route path="/code" element={<QRCodeView />} />

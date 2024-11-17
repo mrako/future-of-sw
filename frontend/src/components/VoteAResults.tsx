@@ -11,7 +11,7 @@ interface VoteCounts {
   [option: string]: number;
 }
 
-const VoteResults: React.FC = () => {
+const VoteAResults: React.FC = () => {
   const [voteCounts, setVoteCounts] = useState<VoteCounts>({});
   const currentDomain = window.location.origin;
 
@@ -33,12 +33,16 @@ const VoteResults: React.FC = () => {
 
   return (
     <div className="results-container">
+      <div className='root-domain-banner'>
+        <span>We have established tooling, practices and trainings for using AI in software development</span>
+      </div>
+
       <div className="results-bar">
         <div
           className="results-section option-one"
           style={{ flex: `${optionOnePercentage} 1 0%` }}
         >
-          <h3>AI-driven Development</h3>
+          <h3>Yes</h3>
           <p>{optionOnePercentage.toFixed(1)}% ({voteCounts['1'] || 0} votes)</p>
         </div>
 
@@ -46,7 +50,7 @@ const VoteResults: React.FC = () => {
           className="results-section option-two"
           style={{ flex: `${optionTwoPercentage} 1 0%` }}
         >
-          <h3>Platform Engineering</h3>
+          <h3>No</h3>
           <p>{optionTwoPercentage.toFixed(1)}% ({voteCounts['2'] || 0} votes)</p>
         </div>
       </div>
@@ -64,4 +68,4 @@ const VoteResults: React.FC = () => {
   );
 };
 
-export default VoteResults;
+export default VoteAResults;

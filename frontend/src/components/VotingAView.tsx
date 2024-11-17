@@ -6,7 +6,7 @@ import './VotingView.css';
 
 const ENDPOINT = process.env.REACT_APP_API_URL || 'http://localhost:9000';
 
-const VotingView: React.FC = () => {
+const VotingAView: React.FC = () => {
   const navigate = useNavigate();
 
   const handleVote = async (option: string) => {
@@ -29,4 +29,4 @@ const VotingView: React.FC = () => {
   );
 };
 
-export default VotingView;
+export default VotingAView;

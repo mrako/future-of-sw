@@ -44,22 +44,25 @@
   font-size: 48px;
   font-weight: bold;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   position: fixed;
-  bottom: 5vh;
+  top: 5vh;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-30%);
   width: 60%;
   z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  flex-wrap: wrap; /* Allow text to wrap */
+  height: 30vh; /* Allow height to adjust based on content */
+  box-sizing: border-box;
 }
 
 .root-domain-banner span {
   display: inline-block;
-  white-space: nowrap;
+  white-space: normal; /* Allow text to wrap */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -67,10 +70,13 @@
 
 .voting-qr-code {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 20%; /* QR code takes up 30% of the page width */
-  height: auto;
+  top: 5vh;
+  left: 5vh;
+  width: 30vh; /* QR code takes up 30% of the page width */
+  height: 30vh;
+  background-color: #ffd100;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .voting-qr-code .qr-code {
