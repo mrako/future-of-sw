@@ -11,7 +11,7 @@ interface VoteCounts {
   [option: string]: number;
 }
 
-const VoteResults: React.FC = () => {
+const VoteCResults: React.FC = () => {
   const [voteCounts, setVoteCounts] = useState<VoteCounts>({});
   const currentDomain = window.location.origin;
 
@@ -33,6 +33,16 @@ const VoteResults: React.FC = () => {
 
   return (
     <div className="results-container">
+      <div className="voting-qr-code">
+        <QRCodeSVG
+          value={currentDomain}
+          size={1200}
+          bgColor={"#ffd100"}
+          fgColor={"#101820"}
+          level={"L"}
+          className="qr-code"
+        />
+      </div>
       <div className="results-bar">
         <div
           className="results-section option-one"
@@ -50,18 +60,8 @@ const VoteResults: React.FC = () => {
           <p>{optionTwoPercentage.toFixed(1)}% ({voteCounts['2'] || 0} votes)</p>
         </div>
       </div>
-      <div className="voting-qr-code">
-        <QRCodeSVG
-          value={currentDomain}
-          size={1200}
-          bgColor={"#ffd100"}
-          fgColor={"#101820"}
-          level={"L"}
-          className="qr-code"
-        />
-      </div>
     </div>
   );
 };
 
-export default VoteResults;
+export default VoteCResults;

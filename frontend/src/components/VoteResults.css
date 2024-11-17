@@ -67,7 +67,7 @@
 
 .voting-qr-code {
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   left: 10px;
   width: 20%; /* QR code takes up 30% of the page width */
   height: auto;

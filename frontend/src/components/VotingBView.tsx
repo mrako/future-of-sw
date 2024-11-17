@@ -6,7 +6,7 @@ import './VotingView.css';
 
 const ENDPOINT = process.env.REACT_APP_API_URL || 'http://localhost:9000';
 
-const VotingView: React.FC = () => {
+const VotingBView: React.FC = () => {
   const navigate = useNavigate();
 
   const handleVote = async (option: string) => {
@@ -20,13 +20,13 @@ const VotingView: React.FC = () => {
 
   return (
     <div className="voting-container">
-      <h2 className="voting-title">We have established tooling, practices and trainings for using AI in software development</h2>
+      <h2 className="voting-title">We actively use AI to modernize our legacy software</h2>
       <div className="voting-buttons">
-        <button className="vote-button" onClick={() => handleVote('1')}>Yes</button>
-        <button className="vote-button" onClick={() => handleVote('2')}>No</button>
+        <button className="vote-button" onClick={() => handleVote('3')}>Yes</button>
+        <button className="vote-button" onClick={() => handleVote('4')}>No</button>
       </div>
     </div>
   );
 };
 
-export default VotingView;
+export default VotingBView;
