@@ -20,7 +20,7 @@ const VotingAView: React.FC = () => {
 
   return (
     <div className="voting-container">
-      <h2 className="voting-title">We have established tooling, practices and trainings for using AI in software development</h2>
+      <h2 className="voting-title">We already deploy AI-generated code to production regularly</h2>
       <div className="voting-buttons">
         <button className="vote-button" onClick={() => handleVote('1')}>Yes</button>
         <button className="vote-button" onClick={() => handleVote('2')}>No</button>

@@ -11,7 +11,7 @@ interface VoteCounts {
   [option: string]: number;
 }
 
-const VoteBResults: React.FC = () => {
+const VoteAResults: React.FC = () => {
   const [voteCounts, setVoteCounts] = useState<VoteCounts>({});
   const currentDomain = window.location.origin;
 
@@ -27,12 +27,33 @@ const VoteBResults: React.FC = () => {
     };
   }, []);
 
-  const totalVotes = (voteCounts['1'] || 0) + (voteCounts['2'] || 0);
-  const optionOnePercentage = totalVotes > 0 ? ((voteCounts['1'] || 0) / totalVotes) * 100 : 50;
-  const optionTwoPercentage = totalVotes > 0 ? ((voteCounts['2'] || 0) / totalVotes) * 100 : 50;
+  const totalVotes = (voteCounts['3'] || 0) + (voteCounts['4'] || 0);
+  const optionOnePercentage = totalVotes > 0 ? ((voteCounts['3'] || 0) / totalVotes) * 100 : 50;
+  const optionTwoPercentage = totalVotes > 0 ? ((voteCounts['4'] || 0) / totalVotes) * 100 : 50;
 
   return (
     <div className="results-container">
+      <div className='root-domain-banner'>
+        <span>We actively use AI to modernize our legacy software</span>
+      </div>
+
+      <div className="results-bar">
+        <div
+          className="results-section option-one"
+          style={{ flex: `${optionOnePercentage} 1 0%` }}
+        >
+          <h3>Yes</h3>
+          <p>{optionOnePercentage.toFixed(1)}% ({voteCounts['3'] || 0} votes)</p>
+        </div>
+
+        <div
+          className="results-section option-two"
+          style={{ flex: `${optionTwoPercentage} 1 0%` }}
+        >
+          <h3>No</h3>
+          <p>{optionTwoPercentage.toFixed(1)}% ({voteCounts['4'] || 0} votes)</p>
+        </div>
+      </div>
       <div className="voting-qr-code">
         <QRCodeSVG
           value={currentDomain}
@@ -43,25 +64,8 @@ const VoteBResults: React.FC = () => {
           className="qr-code"
         />
       </div>
-      <div className="results-bar">
-        <div
-          className="results-section option-one"
-          style={{ flex: `${optionOnePercentage} 1 0%` }}
-        >
-          <h3>AI-driven Development</h3>
-          <p>{optionOnePercentage.toFixed(1)}% ({voteCounts['1'] || 0} votes)</p>
-        </div>
-
-        <div
-          className="results-section option-two"
-          style={{ flex: `${optionTwoPercentage} 1 0%` }}
-        >
-          <h3>Platform Engineering</h3>
-          <p>{optionTwoPercentage.toFixed(1)}% ({voteCounts['2'] || 0} votes)</p>
-        </div>
-      </div>
     </div>
   );
 };
 
-export default VoteBResults;
+export default VoteAResults;

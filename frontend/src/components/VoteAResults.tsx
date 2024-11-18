@@ -34,7 +34,7 @@ const VoteAResults: React.FC = () => {
   return (
     <div className="results-container">
       <div className='root-domain-banner'>
-        <span>We have established tooling, practices and trainings for using AI in software development</span>
+        <span>We already deploy AI-generated code to production regularly</span>
       </div>
 
       <div className="results-bar">

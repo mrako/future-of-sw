@@ -12,7 +12,7 @@ const VotingBView: React.FC = () => {
   const handleVote = async (option: string) => {
     try {
       await axios.post(`${ENDPOINT}/api/votes`, { option });
-      navigate('/results');
+      navigate('/results2');
     } catch (error) {
       console.error('Error voting:', error);
     }
