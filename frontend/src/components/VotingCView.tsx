@@ -20,7 +20,7 @@ const VotingCView: React.FC = () => {
 
   return (
     <div className="voting-container">
-      <h2 className="voting-title">We actively invest in research that replaces part of our work using AI</h2>
+      <h2 className="voting-title">We actively invest in research that replaces our work using AI</h2>
       <div className="voting-buttons">
         <button className="vote-button" onClick={() => handleVote('5')}>Yes</button>
         <button className="vote-button" onClick={() => handleVote('6')}>No</button>

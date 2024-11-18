@@ -56,7 +56,7 @@ const VoteAResults: React.FC = () => {
       </div>
       <div className="voting-qr-code">
         <QRCodeSVG
-          value={currentDomain}
+          value={`${currentDomain}/vote2`}
           size={1200}
           bgColor={"#ffd100"}
           fgColor={"#101820"}

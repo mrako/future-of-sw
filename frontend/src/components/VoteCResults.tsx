@@ -34,7 +34,7 @@ const VoteAResults: React.FC = () => {
   return (
     <div className="results-container">
       <div className='root-domain-banner'>
-        <span>We actively invest in research that replaces part of our work using AI</span>
+        <span>We actively invest in research that replaces our work using AI</span>
       </div>
 
       <div className="results-bar">
@@ -56,7 +56,7 @@ const VoteAResults: React.FC = () => {
       </div>
       <div className="voting-qr-code">
         <QRCodeSVG
-          value={currentDomain}
+          value={`${currentDomain}/vote3`}
           size={1200}
           bgColor={"#ffd100"}
           fgColor={"#101820"}
